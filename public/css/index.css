@@ -1,5 +1,6 @@
 :root {
     --BG: #0c0c0d;
+    --SColor: rgb(215 123 74)
 }
 
 * {
@@ -335,13 +336,39 @@ nav ul a:nth-child(3) li:hover {
     border: none;
     outline: none;
 }
+.project_4 {
+  
+    text-transform: capitalize;
+    font-size: 2rem;
+    height: 50vh!important;
+    position: relative;
+}
+.project_4::before {
+    background-image: url("../images/github-social.png");
+    background-position: center;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0c0c0d;
+    opacity: .1;
+    z-index: -1;
+}
+.project_4 p a {
+    color: var(--SColor)
+}
 
+.project_4 p a:hover {
+    text-decoration: underline;
+}
 /* footer */
 
 footer {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
 }
 
 footer p em {
@@ -357,6 +384,6 @@ footer ul a {
     margin-left: .5rem;
 }
 
-footer ul a:hover {
-    color: rgba(0, 0, 0, .1);
+footer ul a em:hover {
+    color: var(--SColor);
 }
