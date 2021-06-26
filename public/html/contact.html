@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Osama Hussein - Website Developer</title>
+        <!-- Style -->
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/contact.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+            integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+            crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+            integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+            crossorigin="anonymous" />
+    
+        <!-- Script -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="../js/index.js" defer></script>
+    
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    </head>
+
+<body>
+    <div class="loader">
+        <div class="loading_bar"></div>
+        <div class="loading_text">Loading</div>
+    </div>
+    <section class="contact">
+        <form class="contact-form" id="SendEmail">
+            <input type="hidden" name="contact_number" />
+            <label>Your Name</label>
+            <input required id="name" class="name" type="text" name="user_name" placeholder="Type Your Name" />
+            <label>Email</label>
+            <input required id="email" class="email" type="email" name="user_email" placeholder="Your E-mail" />
+            <label>Please write your message below.</label>
+            <textarea required id="message" class="message" name="message"></textarea>
+            <input required class='submit' type="submit" value="Send" />
+        </form>
+        <span id="onsubmit" class="onsubmit"></span>
+        <a class="BackLink" href="/">Back</a>
+    </section>
+</body>
+
+</html>
