@@ -330,19 +330,25 @@ nav ul a:nth-child(3) li:hover {
     width: 75vw;
 }
 
+.Project div p a {
+    text-transform: uppercase;
+    color: var(--SColor);
+}
+
 #Projects div iframe {
     width: 90%;
     height: 90%;
     border: none;
     outline: none;
 }
+
 .project_4 {
-  
     text-transform: capitalize;
     font-size: 2rem;
     height: 50vh!important;
     position: relative;
 }
+
 .project_4::before {
     background-image: url("../images/github-social.png");
     background-position: center;
@@ -356,13 +362,11 @@ nav ul a:nth-child(3) li:hover {
     opacity: .1;
     z-index: -1;
 }
-.project_4 p a {
-    color: var(--SColor)
-}
 
 .project_4 p a:hover {
     text-decoration: underline;
 }
+
 /* footer */
 
 footer {
