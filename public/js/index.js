@@ -19,8 +19,6 @@ document.addEventListener('scroll', () => {
 
 
 // Form
-var OnSubMessage = document.getElementById("onsubmit")
-var FormID = document.getElementById("SendEmail")
 
 
 
@@ -42,6 +40,9 @@ $("form").on(('submit'), (e) => {
 
 })
 
+var OnSubMessage = document.getElementById("onsubmit")
+var FormID = document.getElementById("SendEmail")
+
 FormID.addEventListener("submit", () => {
     OnSubMessage.textContent = "Message Sent."
     OnSubMessage.classList.add('go')
@@ -54,3 +55,5 @@ FormID.addEventListener("submit", () => {
         OnSubMessage.classList.add('display')
     }, 2000)
 })
+
+

@@ -223,12 +223,25 @@ nav ul a:nth-child(3) li:hover {
     text-decoration: underline;
 }
 
+/* Completed Project */
+
+.Nums {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    position: relative;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.Nums span {
+    color: var(--SColor);
+    font-size: 5rem;
+}
+
 /* Skills Section */
-
-/* 
-#Skills {
-
-} */
 
 .Appear {
     height: 100vh;

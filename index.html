@@ -6,28 +6,27 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="./public/css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-        integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
-        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"/>
 
     <!-- Script -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="./public/js/index.js" defer></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./public/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <!-- Packages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js"></script>
+
 </head>
 
 <body>
@@ -57,6 +56,10 @@
                     <span>Freelancer</span>
                 </p>
             </div>
+        </section>
+        <section class="Nums HiddenSections  display" id="Nums_Section">
+            <p>Completed more than <span id="Project_num" class="counter">50</span> projects with excellent customer
+                reviews</p>
         </section>
         <section id="Skills" class="HiddenSections Appear display">
             <div class="skills_List">
@@ -102,23 +105,25 @@
             <h2>My Projects</h2>
             <div class="project_1">
                 <p><a href="keenbot.ml">keenbot Website</a> this one of my largest projects that i work on for my API
-                    application,i built this website using React.js and the website linked with mongodb and The application was built using nodeJS</p>
-                <iframe title="" src="https://www.keenbot.ml/" width="1280" height="720"></iframe>
+                    application,i built this website using React.js and the website linked with mongodb and The
+                    application was built using nodeJS</p>
+                <!-- <iframe title="" src="https://www.keenbot.ml/" width="1280" height="720"></iframe> -->
             </div>
             <div class="project_2">
                 <p><a href="https://itsosmx.github.io/Rock-Paper-Scissors/">RPS Website</a> This one i use Javascript to
                     make a game To present it in a study project for my college</p>
-                <iframe src="https://itsosmx.github.io/Rock-Paper-Scissors/" title="" width="1280"
-                    height="720"></iframe>
+                <!-- <iframe src="https://itsosmx.github.io/Rock-Paper-Scissors/" title="" width="1280"
+                    height="720"></iframe> -->
             </div>
             <div class="project_3">
-                <p><a href="https://www.osmx.tech/">OSMX TECH</a> My blog I always publish articles about programming and technology in general</p>
-                <iframe src="https://www.osmx.tech/" title="" width="1280" height="720"></iframe>
+                <p><a href="https://www.osmx.tech/">OSMX TECH</a> My blog I always publish articles about programming
+                    and technology in general</p>
+                <!-- <iframe src="https://www.osmx.tech/" title="" width="1280" height="720"></iframe> -->
             </div>
             <div class="project_3">
                 <p><a href="https://itsosmx.github.io/Crowdfound/">Crowdfound Website</a> is a challenge from some web
                     designers.</p>
-                <iframe src="https://itsosmx.github.io/Crowdfound/" title="" width="1280" height="720"></iframe>
+                <!-- <iframe src="https://itsosmx.github.io/Crowdfound/" title="" width="1280" height="720"></iframe> -->
             </div>
             <div class="project_4">
                 <p>This is not the End, You can see more of my public work on my <a
@@ -142,9 +147,18 @@
                     <li><em class="fas fa-at"></em></li>
                 </a>
             </ul>
-
         </footer>
+        <audio src=""></audio>
     </article>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+        });
+    </script>
 </body>
+
 
 </html>
