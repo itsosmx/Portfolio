@@ -37,16 +37,22 @@
 </head>
 
 <body>
+    <div class="test">
+        <a class="LeftArrow" onclick="Next(-1)"><em class="fas fa-angle-left"></em></a>
+        <a class="RightArrow" onclick="Next(1)"><em class="fas fa-angle-right"></em></a>
+    </div>
+
+
     <div style="height: 100vh;">s</div>
     <p>Completed more than <span id="Project_num" class="counter">50</span> projects with excellent customer
         reviews</p>
     <script>
-       jQuery(document).ready(function( $ ) {
-        $('.counter').counterUp({
-            delay: 10,
-            time: 1000
+        jQuery(document).ready(function ($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
         });
-    });
        // $(window).on('resize scroll', function () {
         //         if ($("#Project_num").visible(true)) {
         //             $(document).ready(function () {

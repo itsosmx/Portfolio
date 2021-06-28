@@ -320,30 +320,76 @@ nav ul a:nth-child(3) li:hover {
     width: 50%;
 }
 
+/* Projects */
+
+.Project {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
 .Project h2 {
     text-transform: uppercase;
     letter-spacing: 10px;
     text-align: center;
 }
 
-/* Projects */
+.LeftArrow, .RightArrow {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    font-size: 2.5rem;
+}
+
+.LeftArrow {
+    left: 2%;
+}
+
+.RightArrow {
+    right: 2%;
+}
+
+.SlideDiv {
+    display: none;
+    animation: SlideShowAnimation 1s ease-in;
+    -webkit-animation: SlideShowAnimation 1s ease-in;
+}
+
+.LeftArrow em:hover, .RightArrow em:hover {
+    color: var(--SColor);
+}
+
+@keyframes SlideShowAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .Project div {
     width: 100vw;
     height: 100vh;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.Project div p {
+.Project div p, .Github p {
     text-align: center;
     letter-spacing: 1px;
     width: 75vw;
 }
 
-.Project div p a {
+.Project div p a, .Github p a {
     text-transform: uppercase;
     color: var(--SColor);
 }
@@ -355,14 +401,18 @@ nav ul a:nth-child(3) li:hover {
     outline: none;
 }
 
-.project_4 {
+.Github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-transform: capitalize;
     font-size: 2rem;
-    height: 50vh!important;
+    height: 50vh;
     position: relative;
 }
 
-.project_4::before {
+.Github::before {
     background-image: url("../images/github-social.png");
     background-position: center;
     content: "";
@@ -376,7 +426,7 @@ nav ul a:nth-child(3) li:hover {
     z-index: -1;
 }
 
-.project_4 p a:hover {
+.Github p a:hover {
     text-decoration: underline;
 }
 

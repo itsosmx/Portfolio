@@ -18,42 +18,27 @@ document.addEventListener('scroll', () => {
 
 
 
-// Form
 
 
+var index = 1
+SlideShow(index)
 
 
-$("form").on(('submit'), (e) => {
-    e.preventDefault();
-    const email = $('#email').val().trim();
-    const name = $('#name').val().trim();
-    const message = $('#message').val().trim();
+function NextSlide(n) {
+    SlideShow(index += n)
+}
 
-    const Data = {
-        name,
-        email,
-        message
+function SlideShow(num) {
+    var SlidesCol = document.querySelectorAll(".SlideDiv");
+    var Lenght = SlidesCol.length
+    if (num > Lenght) {
+        index = 1
+    } else if (num < 1) {
+        index = Lenght
     }
-    $.post('/SendEmail', Data, () => {
-        console.log("Done...")
-    })
 
-})
-
-var OnSubMessage = document.getElementById("onsubmit")
-var FormID = document.getElementById("SendEmail")
-
-FormID.addEventListener("submit", () => {
-    OnSubMessage.textContent = "Message Sent."
-    OnSubMessage.classList.add('go')
-    OnSubMessage.style.padding = "1rem"
-    OnSubMessage.classList.remove('display')
-    FormID.reset();
-
-    setTimeout(() => {
-        OnSubMessage.classList.remove('go')
-        OnSubMessage.classList.add('display')
-    }, 2000)
-})
-
-
+    for (let i = 0; i < Lenght; i++) {
+        SlidesCol[i].style.display = "none"
+    }
+    SlidesCol[index - 1].style.display = "flex"
+}
