@@ -1,3 +1,16 @@
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
+
+
+
+fetch("./public/html/Skills.html").then(res => {
+    return res.text()
+}).then(date => {
+    document.getElementById("Skills").innerHTML = date
+})
+
+
 var HiddenSections = document.querySelectorAll(".HiddenSections")
 setTimeout(() => {
     for (let i = 0; i < HiddenSections.length; i++) {
@@ -23,9 +36,24 @@ document.addEventListener('scroll', () => {
 var index = 1
 SlideShow(index)
 
+var Timer = AutoSlide(index)
 
 function NextSlide(n) {
+    if (Timer) {
+        clearInterval(Timer)
+        setTimeout(() => {
+            AutoSlide(n)
+        }, 10000)
+    }
     SlideShow(index += n)
+}
+
+
+function AutoSlide(n) {
+    var Timer = setInterval(() => {
+        SlideShow(index += n)
+    }, 5000)
+    return Timer
 }
 
 function SlideShow(num) {
