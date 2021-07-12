@@ -50,10 +50,9 @@ function NextSlide(n) {
 
 
 function AutoSlide(n) {
-    var Timer = setInterval(() => {
+    return setInterval(() => {
         SlideShow(index += n)
     }, 5000)
-    return Timer
 }
 
 function SlideShow(num) {
