@@ -1,8 +1,7 @@
+console.clear();
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))
 }
-
-
 
 fetch("./public/html/Skills.html").then(res => {
     return res.text()
@@ -36,23 +35,26 @@ document.addEventListener('scroll', () => {
 var index = 1
 SlideShow(index)
 
-var Timer = AutoSlide(index)
+var Timer
+var ProjectContaniner = document.getElementById("Projects")
 
-function NextSlide(n) {
+ProjectContaniner.onmouseover = () => {
     if (Timer) {
         clearInterval(Timer)
-        setTimeout(() => {
-            AutoSlide(n)
-        }, 10000)
     }
-    SlideShow(index += n)
+}
+ProjectContaniner.onmouseleave = () => {
+    Timer = AutoSlide(index)
 }
 
+function NextSlide(n) {
+    SlideShow(index += n)
+}
 
 function AutoSlide(n) {
     return setInterval(() => {
         SlideShow(index += n)
-    }, 5000)
+    }, 1000 * 10)
 }
 
 function SlideShow(num) {
